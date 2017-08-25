@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Cotizador\User::class,
+            'model' => Cotizador\Entities\User::class,
         ],
 
         // 'users' => [

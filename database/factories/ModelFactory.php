@@ -12,13 +12,14 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(Cotizador\User::class, function (Faker\Generator $faker) {
+$factory->define(Cotizador\Entities\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
+        'role' => $faker->randomElement(['admin', 'editor', 'editor']),
         'remember_token' => str_random(10),
     ];
 });

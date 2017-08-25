@@ -2,7 +2,7 @@
 
 namespace Cotizador\Http\Controllers\Auth;
 
-use Cotizador\User;
+use Cotizador\Entities\User;
 use Cotizador\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -58,7 +58,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Cotizador\User
+     * @return \Cotizador\Entities\User
      */
     protected function create(array $data)
     {
